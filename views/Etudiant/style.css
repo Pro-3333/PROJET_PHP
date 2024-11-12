@@ -1,0 +1,219 @@
+/* Styles de base et design principal de toutes les pages */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('image.png') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(8px);
+    transform: scale(1.05);
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+/* Ajouter d'autres styles globaux de la page d'accueil */
+
+/* Styles du formulaire spécifique */
+.form-container {
+    background-color: #fff4f4;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    max-width: 500px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: #1db954;
+    text-shadow: 0px 0px 6px rgba(29, 185, 84, 0.6);
+    margin-bottom: 20px;
+    text-align: center;
+}
+/* Design du conteneur de la table pour uniformiser avec les autres pages */
+.table-container {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+  
+    width: 100%;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    padding-top: 50px;
+    text-align: center;
+   
+}
+
+
+.table-container {
+    margin: auto;
+}
+
+/* Tableaux */
+.table th, .table td {
+    vertical-align: middle;
+    color: #e0e0e0;
+}
+
+.table th {
+    color: #1db954;
+}
+
+/* Boutons d’action */
+.btn-action {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 8px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-edit {
+    background-color: green;
+}
+
+.btn-delete {
+    background-color: #ff5252;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    opacity: 0.8;
+}
+.btn-retour {
+    position: fixed;
+    bottom: 20px;  /* Distance depuis le bas de la page */
+    left: 20px;    /* Distance depuis la gauche de la page */
+    background-color: #6c757d;  /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-retour i {
+    font-size: 14px;
+}
+
+.btn-retour:hover {
+    background-color: #5a6268;  /* Couleur lors du survol */
+}
+
+
+/* Effet de survol sur les lignes du tableau */
+.table-hover tbody tr:hover {
+    background-color: rgba(29, 185, 84, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Reste des styles de la page d'ajout */
+input, select {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+.form-control {
+    display: block;
+    /* width: 100%; */
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: white;
+    background-color: #2a2a2a;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+input:focus, select:focus {
+    background-color: #444;
+    outline: none;
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.6);
+}
+.btn-retour {
+    position: fixed;
+    bottom: 20px;  /* Distance depuis le bas de la page */
+    left: 20px;    /* Distance depuis la gauche de la page */
+    background-color: #6c757d;  /* Couleur de fond pour le bouton */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-retour i {
+    font-size: 14px;
+}
+
+.btn-retour:hover {
+    background-color: #5a6268;  /* Couleur lors du survol */
+}
+.btn-submit {
+    background-color: #1db954;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.btn-submit:hover {
+    background-color: #17a554;
+    box-shadow: 0 0 10px rgba(29, 185, 84, 0.6);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
