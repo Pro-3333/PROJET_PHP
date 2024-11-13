@@ -14,150 +14,8 @@ if (!isset($_SESSION['nom_utilisateur'])) {
     <title>Accueil - BON BERGER</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        /* Style minimaliste et espacé */
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            position: relative;
-            
-        }
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers votre fichier CSS -->
 
-        /* Image de fond avec effet flou */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('fond.png') no-repeat center center fixed;
-            background-size: cover;
-            z-index: -1;
-            filter: blur(8px); /* Floute l'image de fond */
-            transform: scale(1.05); /* Agrandit légèrement pour éviter les bords flous */
-            
-        
-        }
-        /* Navbar minimaliste */
-        .navbar {
-            background-color: #fff;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 10;
-        }
-        .navbar-brand {
-            font-size: 1.5rem;
-            color: #333;
-        }
-        .navbar-nav .nav-item .nav-link {
-            color: #555;
-            font-size: 1rem;
-            margin-right: 15px;
-        }
-        .navbar-nav .nav-item .nav-link:hover {
-            color: #007bff;
-        }
-
-        /* Titre principal */
-        h1 {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #0D47A1;
-            margin-top: 100px;
-            margin-bottom: 40px;
-        }
-        h2{
-            font-size: 2.2rem;
-            font-weight: bold;
-            color:444444;
-            margin-top: 100px;
-            margin-bottom: 40px;
-        }
-
-        /* Disposition des cartes */
-        .container {
-            max-width: 1200px;
-            padding: 20px;
-        }
-        .row {
-            gap: 20px;
-        }
-
-        /* Style des cartes avec effet 3D */
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-        }
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-header {
-            font-size: 1.3rem;
-            color: #007bff;
-            background-color: transparent;
-            text-align: center;
-            border-bottom: none;
-        }
-
-        .card-body {
-            padding: 20px;
-            text-align: center;
-            font-size: 1rem;
-            color: #555;
-            
-        }
-        .card-footer {
-            color: #007bff;
-            background-color: transparent;
-            text-align: center;
-        }
-
-
-        /* Bouton personnalisé */
-        .btn-custom {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        .btn-custom:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .navbar-brand {
-                font-size: 1.3rem;
-            }
-            .navbar-nav {
-                flex-direction: column;
-                text-align: center;
-            }
-            .navbar-nav .nav-item {
-                margin-bottom: 10px;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -175,6 +33,8 @@ if (!isset($_SESSION['nom_utilisateur'])) {
         <li class="nav-item"><a class="nav-link" href="views/Professeur/proliste.php">Professeurs</a></li>
         <li class="nav-item"><a class="nav-link" href="views/Salle/salleListe.php">Salles</a></li>
         <li class="nav-item"><a class="nav-link" href="views/Cour/courListe.php">Cours</a></li>
+        <li class="nav-item"><a class="nav-link" href="logout.php">DECONNEXION</a></li>
+
       </ul>
     </div>
   </div>
