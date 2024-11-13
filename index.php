@@ -38,7 +38,7 @@ if (!isset($_SESSION['nom_utilisateur'])) {
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('image.png') no-repeat center center fixed;
+            background: url('fond.png') no-repeat center center fixed;
             background-size: cover;
             z-index: -1;
             filter: blur(8px); /* Floute l'image de fond */
